@@ -1,99 +1,45 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> 𓆉 </title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ellulzzz</title>
+  <link rel="stylesheet" href="style2.css">
+  <style>
+    .flower-animated {
+      position: absolute;
+      width: 60px;
+      animation: flower-float 4s ease-in-out infinite;
+      z-index: 1;
+    }
 
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+    .flower1 { top: 30%; left: 15%; animation-delay: 0s; }
+    .flower2 { top: 35%; left: 70%; animation-delay: 2s; }
+    .flower3 { top: 37%; left: 25%; animation-delay: 0s; }
+    .flower4 { top: 32%; left: 40%; animation-delay: 1s; }
+    .flower5 { top: 38%; left: 55%; animation-delay: 0s; }
 
-
+    @keyframes flower-float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-18px) rotate(6deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+  </style>
 </head>
-<body>
-  <header class="site-header">
-    <img src="images/ellulzzz-header.png" alt="ellulzzz logo">
+<body class="home">
+
+  <img src="images/flower-single.png" alt="floating flower" class="flower-animated flower1">
+  <img src="images/flower-single.png" alt="floating flower" class="flower-animated flower2">
+  <img src="images/flower-single.png" alt="floating flower" class="flower-animated flower3">
+  <img src="images/flower-single.png" alt="floating flower" class="flower-animated flower4">
+  <img src="images/flower-single.png" alt="floating flower" class="flower-animated flower5">
+
+  <header class="home-header">
+    <img src="images/ellulz-home.png" alt="ellulzzz logo" class="logo" />
+    <p class="subtitle">a tiny collection of memories & moments</p>
+    <a href="photo-gallery.html" class="enter-btn">✿ enter ✿</a>
   </header>
-
-  <h2> just a few of my favorite pics i've taken ⸜(｡˃ ᵕ ˂ )⸝♡</h2>
-  <div class="gallery" id="gallery"></div>
- 
-  <script>
-    const gallery = document.getElementById("gallery");
-    const imageCount = 37;
-  
-    for (let i = 1; i <= imageCount; i++) {
-      const fig = document.createElement("figure");
-  
-      const img = document.createElement("img");
-      img.src = `images/photo${i}.jpeg`;
-      img.alt = `photo${i}`;
-  
-      fig.appendChild(img);
-      gallery.appendChild(fig);
-    }
-
-   
-  const galleryImages = document.querySelectorAll("figure img");
-
-  galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-      img.classList.toggle("grayscale");
-    });
-  });
-
-
-  </script>
-  
-
-
-
-<footer>
-  ★°•.✿ ty for visiting! (˶ᵔ ᵕ ᵔ˶) <br>
-  since you made it all the way to the end, <br>
-  might as well play the song  ✿.•°★ <br>
-
-  <audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  
-  
-
-
-</footer>
-
-
-<button id="scrollToTopBtn" title="Go to top">↑</button>
-
-
-
-<script>
-  const scrollBtn = document.getElementById("scrollToTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
-
-<div class="flower-container">
-  <img src="images/flower-yellow.png" class="flower floating flower1">
-  <img src="images/flower-yellow.png" class="flower floating flower2">
-  <img src="images/flower-yellow.png" class="flower floating flower3">
-</div>
-
-<div class="footer-flower">
-  <img src="images/flower-yellow.png">
-</div>
 
 </body>
 </html>

@@ -1,0 +1,50 @@
+body.home {
+    background: #fffdf6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 250px;
+    margin-bottom: -6rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .enter-btn {
+    background: #fdf1b8;
+    color: #6b4e1f;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .enter-btn:hover {
+    background: #ffe680;
+    transform: scale(1.05);
+  }
+  
+  .hero-tagline {
+    font-style: italic;
+    color: #666;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> 𓆉 </title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">
+      <img src="images/ellulzzz-header.png" alt="ellulzzz logo">
+  </a>
+  </header>
+
+  <h2> just a few of my favorite pics i've taken ⸜(｡˃ ᵕ ˂ )⸝♡</h2>
+  <div class="gallery" id="gallery"></div>
+ 
+  <script>
+    const gallery = document.getElementById("gallery");
+    const imageCount = 37;
+  
+    for (let i = 1; i <= imageCount; i++) {
+      const fig = document.createElement("figure");
+  
+      const img = document.createElement("img");
+      img.src = `images/photo${i}.jpeg`;
+      img.alt = `photo${i}`;
+  
+      fig.appendChild(img);
+      gallery.appendChild(fig);
+    }
+
+   
+  const galleryImages = document.querySelectorAll("figure img");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      img.classList.toggle("grayscale");
+    });
+  });
+
+
+  </script>
+  
+
+
+
+<footer>
+  ★°•.✿ ty for visiting! (˶ᵔ ᵕ ᵔ˶) <br>
+  since you made it all the way to the end, <br>
+  might as well play the song  ✿.•°★ <br>
+
+  <audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  
+  
+
+
+</footer>
+
+
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+
+
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+<div class="flower-container">
+  <img src="images/flower-yellow.png" class="flower floating flower1">
+  <img src="images/flower-yellow.png" class="flower floating flower2">
+  <img src="images/flower-yellow.png" class="flower floating flower3">
+</div>
+
+<div class="footer-flower">
+  <a href="index.html"> 
+  <img src="images/flower-yellow.png">
+</a>
+</div>
+
+</body>
+</html>
