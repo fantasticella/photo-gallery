@@ -3,23 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photo Gallery</title>
+  <title> 𓆉 </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>ellulzzz</h1>
+  <h1>
+   
+    ⋆˚✿˖° ellulzzz ⋆˚✿˖°
+    
+  </h1>
+  <h2> just a few of my favorite pics i've taken ⸜(｡˃ ᵕ ˂ )⸝♡</h2>
   <div class="gallery" id="gallery"></div>
   <script>
   const gallery = document.getElementById("gallery");
-  const imageCount = 34;
+  const imageCount = 37;
   for (let i = 1; i <= imageCount; i++) {
     const fig = document.createElement("figure");
     fig.innerHTML = `
       <img src="images/photo${i}.jpeg" alt="photo${i}">
+      <!-- <figcaption>photo${i}</figcaption> -->
+
     `;
     gallery.appendChild(fig);
   }
 </script>
+
+<footer>
+  ty for visiting! ⏾ <br>
+  if you made it to the end, that's amazing <br> 
+  here's a song for you <br>
+
+  <audio controls>
+    <source src="/audio.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  
+  
+
+
+</footer>
 
 </body>
 </html>
