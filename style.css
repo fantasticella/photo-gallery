@@ -53,7 +53,8 @@ figcaption {
 }
 
 
-iframe {
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+footer audio {
+  margin-top: 0.5rem;
+  width: 90%;
+  max-width: 300px;
 }
