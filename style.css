@@ -178,3 +178,9 @@ footer audio {
   width: 60px;
   display: inline-block;
 }
+
+
+.grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}

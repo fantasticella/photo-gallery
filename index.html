@@ -32,6 +32,17 @@
       fig.appendChild(img);
       gallery.appendChild(fig);
     }
+
+   
+  const galleryImages = document.querySelectorAll("figure img");
+
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      img.classList.toggle("grayscale");
+    });
+  });
+
+
   </script>
   
 
