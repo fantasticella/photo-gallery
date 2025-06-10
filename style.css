@@ -1,9 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 2rem;
   background: #f9f9f9;
   color: #333;
+}
+
+footer {
+  font-family: 'Times New Roman', Times, serif
 }
 
 h1 {
@@ -33,12 +37,29 @@ footer {
 
 figure {
   background: white;
-  border-radius: 8px;
+  border-radius: 0px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin: 0;
   text-align: center;
 }
+
+
+figure img {
+  transition: transform 0.3s ease;
+  cursor: default; /* or 'pointer' if you still want the hover hand */
+}
+
+figure img:hover {
+  transform: scale(1.02); /* Just a subtle zoom */
+}
+
+
+figure img:hover {
+  transform: scale(1.05);
+}
+
+
 
 img {
   width: 100%;
@@ -57,4 +78,28 @@ footer audio {
   margin-top: 0.5rem;
   width: 90%;
   max-width: 300px;
+}
+
+
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 99;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
 }

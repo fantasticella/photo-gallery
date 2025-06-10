@@ -14,24 +14,30 @@
   </h1>
   <h2> just a few of my favorite pics i've taken ⸜(｡˃ ᵕ ˂ )⸝♡</h2>
   <div class="gallery" id="gallery"></div>
+ 
   <script>
-  const gallery = document.getElementById("gallery");
-  const imageCount = 37;
-  for (let i = 1; i <= imageCount; i++) {
-    const fig = document.createElement("figure");
-    fig.innerHTML = `
-      <img src="images/photo${i}.jpeg" alt="photo${i}">
-      <!-- <figcaption>photo${i}</figcaption> -->
+    const gallery = document.getElementById("gallery");
+    const imageCount = 37;
+  
+    for (let i = 1; i <= imageCount; i++) {
+      const fig = document.createElement("figure");
+  
+      const img = document.createElement("img");
+      img.src = `images/photo${i}.jpeg`;
+      img.alt = `photo${i}`;
+  
+      fig.appendChild(img);
+      gallery.appendChild(fig);
+    }
+  </script>
+  
 
-    `;
-    gallery.appendChild(fig);
-  }
-</script>
+
 
 <footer>
-  ty for visiting! ⏾ <br>
-  if you made it to the end, that's amazing <br> 
-  here's a song for you <br>
+  ty for visiting! (˶ᵔ ᵕ ᵔ˶) <br>
+  since you made it all the way to the end, <br>
+  might as well play the song  ⏾ <br>
 
   <audio controls>
     <source src="audio.mp3" type="audio/mpeg">
@@ -43,6 +49,30 @@
 
 
 </footer>
+
+
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+
+
+
+<script>
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+
 
 </body>
 </html>
