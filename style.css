@@ -184,3 +184,11 @@ footer audio {
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
+
+
+.project-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 0px;
+}
